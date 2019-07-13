@@ -1,0 +1,35 @@
+@import "../../styles/common";
+
+.root {
+  @include tachyons(debug-grid);
+}
+
+.heroImage {
+  @include tachyons(cover bg-bottom);
+}
+
+.overlay {
+  @include tachyons(
+    h-100 vh-100 mw8 center flex flex-column justify-center items-center
+  );
+}
+
+.title {
+  @include tachyons(
+    flex flex-column flex-row-ns justify-around-ns justify-center items-center
+      pv1
+  );
+}
+
+.titleText {
+  @include tachyons(f1 tc ph2);
+}
+
+.cursive {
+  @include tachyons(f2);
+  font-family: $font-cursive;
+}
+
+.text {
+  @include tachyons(tc lh-copy f4 ph2 bg-black-50);
+}
