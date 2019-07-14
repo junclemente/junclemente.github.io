@@ -3,8 +3,8 @@ import cx from "classname";
 import styles from "./Hero.module.scss";
 import Image from "./mw-joshuatrees.jpg";
 
-const Hero = () => (
-  <div className={styles.root}>
+const Hero = ({ className }) => (
+  <div className={cx(styles.root, className)}>
     <div
       className={styles.heroImage}
       style={{ backgroundImage: `url(${Image})` }}
