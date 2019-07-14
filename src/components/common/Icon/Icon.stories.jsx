@@ -8,7 +8,7 @@ export default storiesOf("common/Icon", module).add("default", () => (
     icon={select(
       "Icon",
       [
-        "html",
+        "html5",
         "react",
         "python",
         "aws",
@@ -25,7 +25,7 @@ export default storiesOf("common/Icon", module).add("default", () => (
         "email",
         "envelope"
       ],
-      "html"
+      "html5"
     )}
   />
 ));
