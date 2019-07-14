@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -20,7 +21,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const fontIcons = {
-  html: faHtml5,
+  html5: faHtml5,
   react: faReact,
   python: faPython,
   aws: faAws,
@@ -35,12 +36,11 @@ const fontIcons = {
   linkedin: faLinkedin,
   flickr: faFlickr,
   email: faEnvelopeOpen,
-  //   envelope: ["fas", "faEnvelope"]
   envelope: faEnvelope
 };
 
-const Icon = ({ icon }) => {
-  return <FontAwesomeIcon icon={fontIcons[icon]} />;
+const Icon = ({ icon, className }) => {
+  return <FontAwesomeIcon className={cx(className)} icon={fontIcons[icon]} />;
 };
 
 export default Icon;
