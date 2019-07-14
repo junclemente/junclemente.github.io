@@ -13,5 +13,6 @@ export default storiesOf("common/Project Card", module).add("default", () => (
     projectTitle={projectTitle}
     image={Image}
     description={description}
+    techIcons={icons}
   />
 ));
