@@ -1,0 +1,13 @@
+@import "../../styles/common";
+
+.root {
+  @include tachyons(mw8 center);
+}
+
+.title {
+  @include tachyons(f2);
+}
+
+.content {
+  @include tachyons(lh-copy);
+}
