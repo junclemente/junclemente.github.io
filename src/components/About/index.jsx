@@ -1,5 +1,5 @@
 import React from "react";
-import cx from "classname";
+import cx from "classnames";
 import SectionTitle from "../common/SectionTitle";
 import styles from "./About.module.scss";
 

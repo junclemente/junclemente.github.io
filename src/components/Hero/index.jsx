@@ -1,5 +1,5 @@
 import React from "react";
-import cx from "classname";
+import cx from "classnames";
 import styles from "./Hero.module.scss";
 import Image from "./mw-joshuatrees.jpg";
 

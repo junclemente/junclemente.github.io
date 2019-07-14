@@ -1,5 +1,5 @@
 import React from "react";
-import cx from "classname";
+import cx from "classnames";
 import styles from "./SectionTitle.module.scss";
 
 const SectionTitle = ({ className, title }) => (
