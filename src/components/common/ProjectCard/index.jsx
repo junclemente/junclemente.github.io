@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import Icon from "../Icon";
-import SpaceBetween from "../SpaceBetween";
 import styles from "./ProjectCard.module.scss";
 
 const ProjectCard = ({
@@ -13,14 +12,14 @@ const ProjectCard = ({
   link
 }) => (
   <div className={cx(styles.root, className)}>
-    <div>{projectTitle}</div>
-    <img src={image} alt={projectTitle} />
+    <div className={styles.title}>{projectTitle}</div>
+    <img src={image} width={200} heigh={200} alt={projectTitle} />
+    <div>
+      {techIcons.map(techIcon => (
+        <Icon icon={techIcon} />
+      ))}
+    </div>
     <p>{description}</p>
-    {/* <SpaceBetween spacing="mr5"> */}
-    {techIcons.map(techIcon => (
-      <Icon className="mh2 f1 flex flex-column" icon={techIcon} />
-    ))}
-    {/* </SpaceBetween> */}
   </div>
 );
 
