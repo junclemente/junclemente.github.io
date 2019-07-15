@@ -1,4 +1,4 @@
-projects = [
+export const projects = [
     {
         "title": "Peptide Sequence Conversion Tool",
         "short_title": "Peptide Tool",
