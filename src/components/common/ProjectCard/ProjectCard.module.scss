@@ -1,0 +1,35 @@
+@import "../../../styles/common";
+
+.root {
+  @include tachyons(flex flex-column ba b--white debug-grid center);
+}
+
+.cardTitle {
+  @include tachyons(tc f3 fw7);
+}
+
+.imageContainer {
+  @include tachyons(relative center);
+}
+
+.cardImage {
+  @include tachyons(z-0 center);
+}
+
+.imageOverlay {
+  @include tachyons(absolute w-100 h-100 z-2 bg-black-40);
+  top: 0;
+  left: 0;
+}
+
+.overlayDim {
+  @include tachyons(o-0);
+}
+
+.iconsWrapper {
+  @include tachyons(center pv2 flex justify-between items-center);
+}
+
+.icon {
+  @include tachyons(f3 mh2);
+}
