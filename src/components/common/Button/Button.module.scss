@@ -1,0 +1,12 @@
+@import "../../../styles/common";
+
+.root {
+  @include tachyons(pv2 ph3 br2 bw1 b--solid dib no-underline fw6 ttu);
+  font-family: inherit;
+}
+
+.primary {
+  color: purple;
+  background-color: $primary-1;
+  border-color: purple;
+}
