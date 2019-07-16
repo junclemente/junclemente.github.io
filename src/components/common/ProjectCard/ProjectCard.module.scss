@@ -1,11 +1,11 @@
 @import "../../../styles/common";
 
 .root {
-  @include tachyons(flex flex-column ba b--white debug-grid center);
+  @include tachyons(flex flex-column center);
 }
 
 .cardTitle {
-  @include tachyons(tc f3 fw7);
+  @include tachyons(tc f4 fw7);
 }
 
 .imageContainer {
@@ -17,7 +17,7 @@
 }
 
 .imageOverlay {
-  @include tachyons(absolute w-100 h-100 z-2 bg-black-40);
+  @include tachyons(absolute w-100 h-100 z-1 bg-black-40);
   top: 0;
   left: 0;
 }
@@ -26,10 +26,20 @@
   @include tachyons(o-0);
 }
 
+.hideText {
+  @include tachyons(dn);
+}
+
+.overlayText {
+  @include tachyons(absolute w-100 h-100 z-2 red);
+  top: 0;
+  left: 0;
+}
+
 .iconsWrapper {
-  @include tachyons(center pv2 flex justify-between items-center);
+  @include tachyons(center pv2 flex flex-wrap justify-center items-center);
 }
 
 .icon {
-  @include tachyons(f3 mh2);
+  @include tachyons(f3 mh2 mb1);
 }

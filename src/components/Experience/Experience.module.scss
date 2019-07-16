@@ -5,5 +5,11 @@
 }
 
 .content {
-  @include tachyons(lh-copy);
+  @include tachyons(
+    lh-copy flex flex-column flex-row-ns justify-around flex-wrap
+  );
+}
+
+.card {
+  @include tachyons(w-25 mh2 ph2);
 }
