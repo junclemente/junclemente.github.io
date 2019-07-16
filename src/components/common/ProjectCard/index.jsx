@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cx from "classnames";
+import Button from "../Button";
 import Icon from "../Icon";
 import styles from "./ProjectCard.module.scss";
 
@@ -49,7 +50,7 @@ const ProjectCard = ({ className, projectInfo, link }) => {
               [styles.overlayText]: hover
             })}
           >
-            <button type="button">More Info</button>
+            <Button>More Info</Button>
           </div>
         </div>
       )}
