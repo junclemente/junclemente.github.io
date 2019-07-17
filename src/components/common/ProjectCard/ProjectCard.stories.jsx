@@ -3,16 +3,17 @@ import { storiesOf } from "@storybook/react";
 import Image from "../../Experience/images/peptidetool-thumb.jpg";
 import ProjectCard from ".";
 
-const projectTitle = "Peptide Tools";
-const description =
-  "Cable hulk heave to rope's end Letter of Marque ballast lee handsomely Barbary Coast scurvy Jack Tar league. Aye holystone transom cable boatswain broadside strike colors dead men tell no tales spirits Pirate Round poop deck nipperkin.";
-const icons = ["python", "html5", "css3", "javascript"];
+const projectInfo = {
+  title: "Peptide Sequence Conversion Tool",
+  short_title: "Peptide Tool",
+  url: "",
+  code: "https://github.com/junclemente/peptools",
+  icons: ["python", "html5", "css3", "javascript"],
+  image: "peptidetool-thumb.jpg",
+  desc:
+    "This is a simple web app using Flask and Python. It takes         a 1-letter amino acid chain representation and converts it to the         3-letter representation. I developed this web app to improve the         efficiency of the sales team and chemists at a company I was          previously working for."
+};
 
 export default storiesOf("common/Project Card", module).add("default", () => (
-  <ProjectCard
-    projectTitle={projectTitle}
-    image={Image}
-    description={description}
-    techIcons={icons}
-  />
+  <ProjectCard projectInfo={projectInfo} />
 ));
