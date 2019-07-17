@@ -1,7 +1,11 @@
 @import "../../../styles/common";
 
 .root {
-  @include tachyons(flex flex-column center);
+  @include tachyons(center);
+}
+
+.container {
+  @include tachyons(mw5 center pv4 flex flex-column);
 }
 
 .cardTitle {
@@ -13,7 +17,7 @@
 }
 
 .cardImage {
-  @include tachyons(z-0 center);
+  @include tachyons(z-0 center w-100 h-auto);
 }
 
 .imageOverlay {

@@ -28,47 +28,49 @@ const ProjectCard = ({ className, projectInfo, link }) => {
   console.log(hover);
   return (
     <div className={cx(styles.root, className)}>
-      {short_title ? (
-        <div className={styles.cardTitle}>{short_title}</div>
-      ) : (
-        <div className={styles.cardTitle}>{title}</div>
-      )}
-      {image && (
-        <div
-          className={styles.imageContainer}
-          onMouseEnter={onMouseEnterHandler}
-          onMouseLeave={onMouseLeaveHandler}
-          onClick={modalOpenHandler}
-        >
-          <img
-            className={styles.cardImage}
-            src={require(`./images/${image}`)}
-            width={200}
-            heigh={200}
-            alt={short_title}
-          />
+      <div className={styles.container}>
+        {short_title ? (
+          <div className={styles.cardTitle}>{short_title}</div>
+        ) : (
+          <div className={styles.cardTitle}>{title}</div>
+        )}
+        {image && (
           <div
-            className={cx(styles.imageOverlay, {
-              [styles.overlayDim]: hover
-            })}
-          />
-          {/* <div
+            className={styles.imageContainer}
+            onMouseEnter={onMouseEnterHandler}
+            onMouseLeave={onMouseLeaveHandler}
+            onClick={modalOpenHandler}
+          >
+            <img
+              className={styles.cardImage}
+              src={require(`./images/${image}`)}
+              width={200}
+              heigh={200}
+              alt={short_title}
+            />
+            <div
+              className={cx(styles.imageOverlay, {
+                [styles.overlayDim]: hover
+              })}
+            />
+            {/* <div
             className={cx({
               [styles.hideText]: !hover,
               [styles.overlayText]: hover
             })}
           >
-            <Button>More Info</Button>
+          <Button>More Info</Button>
           </div> */}
-        </div>
-      )}
-      {icons && (
-        <div className={styles.iconsWrapper}>
-          {icons.sort().map(techIcon => (
-            <Icon key={techIcon} className={styles.icon} icon={techIcon} />
-          ))}
-        </div>
-      )}
+          </div>
+        )}
+        {icons && (
+          <div className={styles.iconsWrapper}>
+            {icons.sort().map(techIcon => (
+              <Icon key={techIcon} className={styles.icon} icon={techIcon} />
+            ))}
+          </div>
+        )}
+      </div>
       {/* {desc && <p>{desc}</p>} */}
       <Modal isOpen={showModal} onRequestClose={modalCloseHandler}>
         <ProjectDetail
