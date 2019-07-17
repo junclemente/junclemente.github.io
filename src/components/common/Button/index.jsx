@@ -2,7 +2,14 @@ import React from "react";
 import cx from "classnames";
 import styles from "./Button.module.scss";
 
-const Button = ({ children, className, theme, type = "button", href }) => {
+const Button = ({
+  children,
+  className,
+  theme,
+  type = "button",
+  href,
+  ...otherProps
+}) => {
   return (
     <button
       className={cx(styles.root, className, {
@@ -11,6 +18,7 @@ const Button = ({ children, className, theme, type = "button", href }) => {
       })}
       type={type}
       href={href}
+      {...otherProps}
     >
       {children}
     </button>
