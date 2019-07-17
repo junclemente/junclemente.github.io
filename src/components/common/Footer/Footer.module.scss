@@ -1,11 +1,25 @@
 @import "../../../styles/common";
 
 .root {
-  @include tachyons(flex bt debug-white);
+  @include tachyons(bt w-100 pv4);
+  min-height: rem(1000);
   border-top-color: $secondary-2;
   background-color: $secondary-4;
 }
 
 .footer {
-  @include tachyons(center mw7 debug-grid);
+  @include tachyons(center mw8 debug-grid);
+}
+
+.title {
+  @include tachyons(w-100);
+}
+
+.content {
+  @include tachyons(flex flex-row justify-around);
+}
+
+.link {
+  @include tachyons(link);
+  color: $primary-1;
 }
