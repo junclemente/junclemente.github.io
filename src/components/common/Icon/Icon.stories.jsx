@@ -23,7 +23,9 @@ export default storiesOf("common/Icon", module).add("default", () => (
         "linkedin",
         "flickr",
         "email",
-        "envelope"
+        "envelope",
+        "github",
+        "website"
       ],
       "html5"
     )}

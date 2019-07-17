@@ -1,6 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelopeOpen,
+  faGlobeAmericas
+} from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faHtml5,
@@ -16,7 +19,8 @@ import {
   faWordpress,
   faInstagram,
   faLinkedin,
-  faFlickr
+  faFlickr,
+  faGithubSquare
 } from "@fortawesome/free-brands-svg-icons";
 
 const fontIcons = {
@@ -35,7 +39,9 @@ const fontIcons = {
   linkedin: faLinkedin,
   flickr: faFlickr,
   email: faEnvelopeOpen,
-  envelope: faEnvelope
+  envelope: faEnvelope,
+  github: faGithubSquare,
+  website: faGlobeAmericas
 };
 
 const Icon = ({ icon, className }) => {
