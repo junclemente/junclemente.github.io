@@ -1,0 +1,11 @@
+@import "../../../styles/common";
+
+.modal {
+  @include tachyons(mw7 center bn);
+}
+
+.overlay {
+  @include tachyons(
+    flex justify-center items-center fixed absolute--fill z-5 bg-black-90
+  );
+}
