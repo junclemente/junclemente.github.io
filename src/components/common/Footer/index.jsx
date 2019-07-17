@@ -7,7 +7,7 @@ const Footer = ({ classNames }) => (
   <div className={cx(styles.root, classNames)}>
     <div className={styles.footer}>
       <div className={styles.content}>
-        <Icon icon="email">
+        <Icon className={styles.icon} icon="email">
           <a
             className={styles.link}
             href="mailto:kjstudios858@gmail.com"
@@ -16,7 +16,7 @@ const Footer = ({ classNames }) => (
             Email
           </a>
         </Icon>
-        <Icon icon="linkedin">
+        <Icon className={styles.icon} icon="linkedin">
           <a
             className={styles.link}
             href="https://www.linkedin.com/in/junclemente"
@@ -27,7 +27,7 @@ const Footer = ({ classNames }) => (
             LinkedIn
           </a>
         </Icon>
-        <Icon icon="instagram">
+        <Icon className={styles.icon} icon="instagram">
           <a
             className={styles.link}
             href="https://www.instagram.com/code_and_light"
@@ -37,7 +37,7 @@ const Footer = ({ classNames }) => (
             Instagram
           </a>
         </Icon>
-        <Icon icon="flickr">
+        <Icon className={styles.icon} icon="flickr">
           <a
             className={styles.link}
             href="https://www.flickr.com/juncphotos"

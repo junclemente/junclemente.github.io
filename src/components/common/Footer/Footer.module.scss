@@ -2,21 +2,20 @@
 
 .root {
   @include tachyons(bt w-100 pv4);
-  min-height: rem(1000);
   border-top-color: $secondary-2;
   background-color: $secondary-4;
 }
 
 .footer {
-  @include tachyons(center mw8);
-}
-
-.title {
-  @include tachyons(w-100);
+  @include tachyons(center mw8 ph4);
 }
 
 .content {
-  @include tachyons(flex flex-row justify-around);
+  @include tachyons(flex flex-row-ns flex-column justify-around);
+}
+
+.icon {
+  @include tachyons(ph2-ns pv2);
 }
 
 .link {
