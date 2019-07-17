@@ -2,7 +2,7 @@ import React from "react";
 import cx from "classnames";
 import SectionTitle from "../common/SectionTitle";
 import ProjectCard from "../common/ProjectCard";
-import { projects } from "./projects/my_projects";
+import { projects, websites } from "./projects/projects-data";
 import styles from "./Experience.module.scss";
 
 const Experience = ({ className }) => {
@@ -13,6 +13,11 @@ const Experience = ({ className }) => {
       <div className={styles.content}>
         {projects.map((project, i) => (
           <ProjectCard className={styles.card} key={i} projectInfo={project} />
+        ))}
+      </div>
+      <div className={styles.content}>
+        {websites.map((website, i) => (
+          <ProjectCard className={styles.card} key={i} projectInfo={website} />
         ))}
       </div>
     </div>
