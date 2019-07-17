@@ -53,14 +53,6 @@ const ProjectCard = ({ className, projectInfo, link }) => {
                 [styles.overlayDim]: hover
               })}
             />
-            {/* <div
-            className={cx({
-              [styles.hideText]: !hover,
-              [styles.overlayText]: hover
-            })}
-          >
-          <Button>More Info</Button>
-          </div> */}
           </div>
         )}
         {icons && (
