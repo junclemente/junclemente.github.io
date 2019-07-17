@@ -1,7 +1,9 @@
 @import "../../../styles/common";
 
 .root {
-  @include tachyons(pv2 ph3 br2 bw1 b--solid dib no-underline fw6 db);
+  @include tachyons(
+    pv2 ph3 br2 bw1 b--solid dib no-underline fw6 db mw4-ns w-100
+  );
   font-family: inherit;
 }
 
