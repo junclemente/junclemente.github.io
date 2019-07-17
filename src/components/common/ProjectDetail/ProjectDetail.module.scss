@@ -15,15 +15,11 @@
 }
 
 .linkWrapper {
-  @include tachyons(flex flex-row justify-center center debug-grid);
-}
-
-.linkGroup {
-  @include tachyons(ph4);
+  @include tachyons(flex flex-row justify-center center);
 }
 
 .icon {
-  @include tachyons(f4 mh2);
+  @include tachyons(mh4);
 }
 
 .link {
@@ -35,5 +31,5 @@
 }
 
 .button {
-  @include tachyons(center mw3);
+  @include tachyons(center);
 }

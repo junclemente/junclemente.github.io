@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import Button from "../Button";
 import Icon from "../Icon";
 import styles from "./ProjectDetail.module.scss";
@@ -9,8 +10,7 @@ const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
       <h1 className={styles.title}>{title}</h1>
       <div className={styles.linkWrapper}>
         {url && (
-          <div className={styles.linkGroup}>
-            <Icon className={styles.icon} icon="website" />
+          <Icon className={styles.icon} icon="website">
             <a
               className={styles.link}
               href={url}
@@ -19,11 +19,10 @@ const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
             >
               View Site
             </a>
-          </div>
+          </Icon>
         )}
         {code && (
-          <div className={styles.linkGroup}>
-            <Icon className={styles.icon} icon="github" />
+          <Icon className={styles.icon} icon="github">
             <a
               className={styles.link}
               href={code}
@@ -32,7 +31,7 @@ const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
             >
               View Code
             </a>
-          </div>
+          </Icon>
         )}
       </div>
       <p className={styles.description}>{description}</p>
