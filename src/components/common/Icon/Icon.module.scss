@@ -1,0 +1,9 @@
+@import "../../../styles/common";
+
+.root {
+  @include tachyons(ph2 flex justify-start items-center);
+}
+
+.icon {
+  @include tachyons(f3 mr2);
+}

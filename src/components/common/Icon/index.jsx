@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeOpen,
@@ -22,6 +23,7 @@ import {
   faFlickr,
   faGithubSquare
 } from "@fortawesome/free-brands-svg-icons";
+import styles from "./Icon.module.scss";
 
 const fontIcons = {
   html5: faHtml5,
@@ -44,8 +46,16 @@ const fontIcons = {
   website: faGlobeAmericas
 };
 
-const Icon = ({ icon, className }) => {
-  return <FontAwesomeIcon className={className} icon={fontIcons[icon]} />;
+const Icon = ({ icon, className, iconStyle, children }) => {
+  return (
+    <div className={cx(styles.root, className)}>
+      <FontAwesomeIcon
+        className={cx(styles.icon, iconStyle)}
+        icon={fontIcons[icon]}
+      />
+      {children}
+    </div>
+  );
 };
 
 export default Icon;
