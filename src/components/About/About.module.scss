@@ -1,11 +1,11 @@
 @import "../../styles/common";
 
 .root {
-  @include tachyons(mw8 center);
+  @include tachyons(w-100);
 }
 
-.title {
-  @include tachyons(f2);
+.container {
+  @include tachyons(mw8 center ph4);
 }
 
 .content {
