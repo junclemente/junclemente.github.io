@@ -1,7 +1,7 @@
 @import "../../../styles/common";
 
 .modal {
-  @include tachyons(mw7 center bn);
+  @include tachyons(center);
 }
 
 .overlay {
