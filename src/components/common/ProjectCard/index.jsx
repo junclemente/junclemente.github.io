@@ -2,20 +2,29 @@ import React, { useState } from "react";
 import cx from "classnames";
 import Button from "../Button";
 import Icon from "../Icon";
+import Modal from "../Modal";
+import ProjectDetail from "../ProjectDetail";
 import styles from "./ProjectCard.module.scss";
 
 const ProjectCard = ({ className, projectInfo, link }) => {
-  const { title, short_title, image, desc, icons } = projectInfo;
+  const { title, short_title, image, url, code, desc, icons } = projectInfo;
   const [hover, setHover] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const onMouseEnterHandler = () => {
     setHover(true);
   };
   const onMouseLeaveHandler = () => {
     setHover(false);
   };
-  const onClickHandler = () => {
-    alert("clicked");
+
+  const modalOpenHandler = () => {
+    setShowModal(true);
   };
+
+  const modalCloseHandler = () => {
+    setShowModal(false);
+  };
+
   console.log(hover);
   return (
     <div className={cx(styles.root, className)}>
@@ -29,11 +38,10 @@ const ProjectCard = ({ className, projectInfo, link }) => {
           className={styles.imageContainer}
           onMouseEnter={onMouseEnterHandler}
           onMouseLeave={onMouseLeaveHandler}
-          onClick={onClickHandler}
+          onClick={modalOpenHandler}
         >
           <img
             className={styles.cardImage}
-            // src="https://via.placeholder.com/200"
             src={require(`./images/${image}`)}
             width={200}
             heigh={200}
@@ -62,6 +70,15 @@ const ProjectCard = ({ className, projectInfo, link }) => {
         </div>
       )}
       {/* {desc && <p>{desc}</p>} */}
+      <Modal isOpen={showModal} onRequestClose={modalCloseHandler}>
+        <ProjectDetail
+          title={title}
+          url={url}
+          code={code}
+          description={desc}
+          onRequestClose={modalCloseHandler}
+        />
+      </Modal>
     </div>
   );
 };
