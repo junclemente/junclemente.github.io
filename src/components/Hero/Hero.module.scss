@@ -1,7 +1,7 @@
 @import "../../styles/common";
 
 .root {
-  @include tachyons(debug-grid);
+  color: $primary-1;
 }
 
 .heroImage {
@@ -16,18 +16,21 @@
 
 .title {
   @include tachyons(
-    flex flex-column flex-row-ns justify-around-ns justify-center items-center
-      pv1
+    flex flex-column flex-row-ns items-center pv1-ns pt0 pb4 ma4-ns
   );
 }
 
 .titleText {
-  @include tachyons(f1 tc ph2);
+  @include tachyons(f-6 tc ph2 pt0 mv0 ma4-ns);
 }
 
 .cursive {
-  @include tachyons(f2);
+  @include tachyons(f-5 pb0);
   font-family: $font-cursive;
+}
+
+.smallText {
+  @include tachyons(mv3);
 }
 
 .text {

@@ -14,7 +14,7 @@ const Hero = ({ className }) => (
           <h1 className={styles.titleText}>
             {"<"}Code{">"}
           </h1>
-          <p>and</p>
+          <p className={styles.smallText}>and</p>
           <h1 className={cx(styles.titleText, styles.cursive)}>light</h1>
         </div>
         <div className={styles.text}>

@@ -1,13 +1,11 @@
 import React from "react";
 import cx from "classnames";
 import Icon from "../Icon";
-import SectionTitle from "../SectionTitle";
 import styles from "./Footer.module.scss";
 
 const Footer = ({ classNames }) => (
   <div className={cx(styles.root, classNames)}>
     <div className={styles.footer}>
-      {/* <SectionTitle className={styles.title} title="Let's Connect" /> */}
       <div className={styles.content}>
         <Icon icon="email">
           <a
