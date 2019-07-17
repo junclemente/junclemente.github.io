@@ -4,7 +4,9 @@ import styles from "./SectionTitle.module.scss";
 
 const SectionTitle = ({ className, title }) => (
   <div className={cx(styles.root, className)}>
-    <h1 className={styles.content}>{title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.content}>{title}</h1>
+    </div>
   </div>
 );
 
