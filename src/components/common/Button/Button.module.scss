@@ -10,3 +10,9 @@
   background-color: $primary-1;
   border-color: purple;
 }
+
+.primaryOutline {
+  color: $primary-1;
+  background-color: transparent;
+  border-color: $primary-1;
+}

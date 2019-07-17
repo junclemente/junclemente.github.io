@@ -5,6 +5,6 @@ import Button from ".";
 
 export default storiesOf("common/Button", module).add("default", () => (
   <Button theme={select("Theme", ["primary", "primary-outline"], "primary")}>
-    {text("children", "Button")}
+    {text("Text", "Button")}
   </Button>
 ));
