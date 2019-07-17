@@ -1,0 +1,11 @@
+@import "../../../styles/common";
+
+.root {
+  @include tachyons(flex bt debug-white);
+  border-top-color: $secondary-2;
+  background-color: $secondary-4;
+}
+
+.footer {
+  @include tachyons(center mw7 debug-grid);
+}
