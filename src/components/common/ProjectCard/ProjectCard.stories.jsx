@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Image from "../../Experience/images/peptidetool-thumb.jpg";
 import ProjectCard from ".";
 
 const projectInfo = {
