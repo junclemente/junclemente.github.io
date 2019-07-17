@@ -206,7 +206,7 @@ export const websites = [
     short_title: "",
     url: "http://www.pacificpathology.ccom",
     code: "",
-    icons: ["html"],
+    icons: ["html5"],
     image: "pacpath-thumb.jpg",
     desc:
       "I developed the first iteration of this website. This         resulted in an increase of clients and it extended their client-based         outside of San Diego County."

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import Button from "../Button";
 import Icon from "../Icon";
 import Modal from "../Modal";
 import ProjectDetail from "../ProjectDetail";
@@ -25,7 +24,6 @@ const ProjectCard = ({ className, projectInfo, link }) => {
     setShowModal(false);
   };
 
-  console.log(hover);
   return (
     <div className={cx(styles.root, className)}>
       <div className={styles.container}>
