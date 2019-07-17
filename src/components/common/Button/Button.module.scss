@@ -1,7 +1,7 @@
 @import "../../../styles/common";
 
 .root {
-  @include tachyons(pv2 ph3 br2 bw1 b--solid dib no-underline fw6 ttu);
+  @include tachyons(pv2 ph3 br2 bw1 b--solid dib no-underline fw6 db);
   font-family: inherit;
 }
 
@@ -15,4 +15,9 @@
   color: $primary-1;
   background-color: transparent;
   border-color: $primary-1;
+}
+
+.secondary {
+  color: $primary-1;
+  background-color: $secondary-1;
 }

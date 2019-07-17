@@ -14,7 +14,8 @@ const Button = ({
     <button
       className={cx(styles.root, className, {
         [styles.primary]: theme === "primary",
-        [styles.primaryOutline]: theme === "primary-outline"
+        [styles.primaryOutline]: theme === "primary-outline",
+        [styles.secondary]: theme === "secondary"
       })}
       type={type}
       href={href}
