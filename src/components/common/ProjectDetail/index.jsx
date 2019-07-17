@@ -1,16 +1,50 @@
 import React from "react";
 import Button from "../Button";
+import Icon from "../Icon";
 import styles from "./ProjectDetail.module.scss";
 
 const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
   <div className={styles.root}>
-    <h1>{title}</h1>
-    <p>{url}</p>
-    <p>{code}</p>
-    <p>{description}</p>
-    <Button type="button" onClick={onRequestClose}>
-      Close
-    </Button>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.linkWrapper}>
+        {url && (
+          <div className={styles.linkGroup}>
+            <Icon className={styles.icon} icon="website" />
+            <a
+              className={styles.link}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Site
+            </a>
+          </div>
+        )}
+        {code && (
+          <div className={styles.linkGroup}>
+            <Icon className={styles.icon} icon="github" />
+            <a
+              className={styles.link}
+              href={code}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Code
+            </a>
+          </div>
+        )}
+      </div>
+      <p className={styles.description}>{description}</p>
+      <Button
+        className={styles.button}
+        theme="secondary"
+        type="button"
+        onClick={onRequestClose}
+      >
+        Close
+      </Button>
+    </div>
   </div>
 );
 

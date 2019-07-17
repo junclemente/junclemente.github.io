@@ -1,6 +1,39 @@
 @import "../../../styles/common";
 
 .root {
+  @include tachyons(center mw7);
   color: $secondary-2;
   background-color: $primary-1;
+}
+
+.container {
+  @include tachyons(flex flex-column justify-center pa4);
+}
+
+.title {
+  @include tachyons(tc);
+}
+
+.linkWrapper {
+  @include tachyons(flex flex-row justify-center center debug-grid);
+}
+
+.linkGroup {
+  @include tachyons(ph4);
+}
+
+.icon {
+  @include tachyons(f4 mh2);
+}
+
+.link {
+  @include tachyons(link);
+}
+
+.description {
+  @include tachyons(center lh-copy);
+}
+
+.button {
+  @include tachyons(center mw3);
 }
