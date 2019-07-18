@@ -154,22 +154,22 @@ export const websites = [
   {
     title: "GS Communication",
     short_title: "",
-    url: "http://www.gs-communication.com/",
+    url: "",
     code: "https://github.com/junclemente/flask_gscom",
     icons: ["html5", "javascript", "python", "css3"],
     image: "gscom-thumb.jpg",
     desc:
-      "Designed and developed this website for the engineering firm         GS Communication, giving them their first web presence. The backend         is developed with Python,Flask, and Jinja2. The frontend is designed         using HTML5, CSS3 and Bootstrap."
+      "<p>Designed and developed this website for the engineering firm GS Communication, giving them their first web presence. The backend is developed with Python,Flask, and Jinja2. The frontend is designed using HTML5, CSS3 and Bootstrap.</p> <p><strong>Note:</strong> This site is no longer active but the code is still accessible through the link above.</p>"
   },
   {
     title: "M&G Wedding",
     short_title: "",
-    url: "http://www.graceandmelvin.com",
+    url: "https://codeandlight.com/mgsite/",
     code: "https://github.com/junclemente/mgsite",
     icons: ["html5", "css3", "javascript"],
     image: "mgsite-thumb.jpg",
     desc:
-      "Designed and developed this responsive website for the         wedding of my brother and his fiance. The site incorporates         Bootstrap, HTML5, CSS3, JavaScript,jQuery and KnockoutJS. It is a         single page application (SPA). To minimize the costs for the bride         and groom, the site is hosted on Github Pages using a custom domain         name from GoDaddy. The RSVP is handled using Google Docs services."
+      "<p>I designed and developed this responsive website for the wedding of my brother and his fiance. The site incorporates Bootstrap, HTML5, CSS3, JavaScript,jQuery and KnockoutJS. It is a single page application (SPA). To minimize the costs for the bride and groom, the site was hosted on Github Pages using a custom domain name. The RSVPs were handled using Google Docs services.</p> <p><strong>Note:</strong> This site is still accessible through the links above but it is no longer being maintained.</p>"
   },
   {
     title: "Body Evolution",
@@ -179,7 +179,7 @@ export const websites = [
     icons: ["html5", "wordpress", "css3", "php"],
     image: "be-jumbotron-thumb.jpg",
     desc:
-      "I maintain and update this website based on the information         provided by the site designer. Through this WordPress powered         website, I gain hands-on experience working with the Genesis         Framework, some PHP and WordPress as a Content Management System."
+      "<p>I maintained and updated this website based on the information provided by the site designer. Through this WordPress powered website, I gained hands-on experience working with the Genesis Framework, some PHP and WordPress as a Content Management System.</p> <p><strong>Note:</strong> I am no longer maintaining this site.</p>"
   },
   {
     title: "Catechism Class",
@@ -189,26 +189,26 @@ export const websites = [
     icons: ["html5", "css3", "php", "javascript"],
     image: "cat-class-shield-thumb.jpg",
     desc:
-      "I develop new code and update existing JavaScript/jQuery to         improve client-facing features. I also review and update         JavaScript/jQuery to current standards, fix bugs and improve speed         and efficiency. I collaborate with other team members to maintain and         update the website that uses PHP and MySQL in the backend."
+      "<p>I develop new code and update existing JavaScript/jQuery to improve client-facing features. I also review and update JavaScript/jQuery to current standards, fix bugs and improve speed and efficiency. I collaborate with other team members to maintain and update the website that uses PHP and MySQL in the backend.</p>"
   },
   {
     title: "Code and Light",
     short_title: "",
     url: "",
-    code: "https://github.com/junclemente/codeandlight",
-    icons: ["html5", "css3", "javascript", "python"],
+    code: "https://github.com/junclemente/junclemente.github.io",
+    icons: ["html5", "css3", "javascript", "react"],
     image: "mw-joshuatrees-thumb.jpg",
     desc:
-      "This website is built using Python and Flask to power the         the backend. Jinja2 is used for creating the HTML template.         Bootstrap, along with custom CSS3 and JavaScript/jQuery are used to         handle the frontend. Local development is performed in the 'source/'         directory. Once it is ready for deployment, GulpJS is run to create         the production version of the site."
+      "<p>This website has been updated and recreated using ReactJS. Tachyons.io is used to style the page instead of Bootstrap.</p> <p>It was originally built using Python and Flask to serve the backend and Jinja2 was used for creating the HTML template. Bootstrap, along with custom CSS3 and JavaScript/jQuery are used to handle the frontend.</p>"
   },
   {
     title: "Pacific Pathology, Inc.",
     short_title: "",
-    url: "http://www.pacificpathology.ccom",
+    url: "http://www.pacificpathology.com",
     code: "",
-    icons: ["html5"],
+    icons: ["html5", "css3"],
     image: "pacpath-thumb.jpg",
     desc:
-      "I developed the first iteration of this website. This         resulted in an increase of clients and it extended their client-based         outside of San Diego County."
+      "<p>I developed the first iteration of this website. This resulted in an increase of clients and it extended their client-based outside of San Diego County.</p> <p><strong>Note:</strong> This site is now managed by another person."
   }
 ];

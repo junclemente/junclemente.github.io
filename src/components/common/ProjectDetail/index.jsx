@@ -33,7 +33,7 @@ const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
           </Icon>
         )}
       </div>
-      <p className={styles.description}>{description}</p>
+      <div className={styles.description} dangerouslySetInnerHTML={{__html: description}} />
       <Button
         className={styles.button}
         theme="secondary"
