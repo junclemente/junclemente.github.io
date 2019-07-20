@@ -1,4 +1,5 @@
 import React from "react";
+import { Markup } from "interweave";
 import Button from "../Button";
 import Icon from "../Icon";
 import styles from "./ProjectDetail.module.scss";
@@ -33,7 +34,7 @@ const ProjectDetail = ({ title, url, code, description, onRequestClose }) => (
           </Icon>
         )}
       </div>
-      <div className={styles.description} dangerouslySetInnerHTML={{__html: description}} />
+      <Markup className={styles.description} content={description} />
       <Button
         className={styles.button}
         theme="secondary"
