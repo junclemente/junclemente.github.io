@@ -9,11 +9,20 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
+    "gatsby": "^2.24.49",
+    "gatsby-background-image": "^1.1.2",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sharp": "^2.6.31",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-transformer-sharp": "^2.5.14",
     "gh-pages": "^2.0.1",
     "interweave": "^11.1.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^6.1.0",
     "react-modal": "^3.9.1",
     "react-scripts": "3.0.1",
     "tachyons": "^4.11.1",
@@ -27,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9009 -s public --ci",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "develop": "gatsby clean && gatsby develop"
   },
   "eslintConfig": {
     "extends": "react-app"

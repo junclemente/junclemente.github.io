@@ -1,0 +1,3 @@
+@mixin tachyons($className) {
+  composes: $className from global;
+}

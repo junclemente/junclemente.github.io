@@ -1,0 +1,27 @@
+@import "./common";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  color: $primary-1;
+  background-color: $secondary-3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-monospace;
+}
+
+p {
+  font-family: $font-serif;
+}

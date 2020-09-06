@@ -1,0 +1,9 @@
+@import "../../styles/common";
+
+.root {
+  height: 100vh;
+}
+
+.heroImage {
+  @include tachyons(cover bg-bottom);
+}
