@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.14",
     "gh-pages": "^2.0.1",
     "interweave": "^11.1.0",
