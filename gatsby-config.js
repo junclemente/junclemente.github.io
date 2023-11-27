@@ -8,5 +8,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  siteMetadata: {
+    title: `junclemente.com`,
+    siteUrl: `https://junclemente.com`,
+  },
   plugins: [],
 }
