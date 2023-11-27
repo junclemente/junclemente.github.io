@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-index-js-70c5c76dcb09a383a0ea.js","mappings":"gKAMA,UAJc,IACL,2BAAK,e","sources":["webpack://gatsby-starter-hello-world/./src/pages/index.js"],"sourcesContent":["import * as React from \"react\"\n\nconst index = () => {\n  return <div>Hello world!</div>\n}\n\nexport default index\n"],"names":[],"sourceRoot":""}
