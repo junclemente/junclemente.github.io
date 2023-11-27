@@ -12,5 +12,5 @@ module.exports = {
     title: `junclemente.com`,
     siteUrl: `https://junclemente.com`,
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-postcss"],
 }
