@@ -1,8 +1,10 @@
 import * as React from "react"
 
+import Layout from "./components/Layout"
+
 const index = () => {
   return (
-    <div>
+    <Layout>
       <h1>Welcome to my professional portfolio!</h1>
       <p>
         As I embark on the exciting journey of re-developing this website, I am
@@ -30,8 +32,12 @@ const index = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </Layout>
   )
 }
 
 export default index
+
+export const Head = () => {
+  return <title>Home</title>
+}
