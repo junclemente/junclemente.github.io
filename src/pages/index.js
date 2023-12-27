@@ -9,7 +9,7 @@ const index = () => {
         <h1>Welcome to my professional portfolio!</h1>
       </div>
       <div class="container mx-auto">
-        <div className=" bg-slate-100 px-16 py-8">
+        <div class="bg-slate-100 px-16 py-8">
           <p class="py-4">
             As I embark on the exciting journey of re-developing this website, I
             am thrilled to offer you a glimpse into my career and professional
@@ -51,92 +51,96 @@ const index = () => {
           </ul>
         </div>
       </div>
-      <div class="container mx-auto">
-        <h3>Links</h3>
-        <h5>
-          University of San Diego - Master of Science in Applied Data Science
-          (MSADS)
-        </h5>
-        <div>
-          <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-            <li>
-              <a
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                href="https://mycas.sandiego.edu/cas/login?service=https%3A%2F%2Fmy.sandiego.edu%3A443%2Fmysandiegoportal%2F"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Student Portal
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                href="https://onlinedegrees.sandiego.edu/studentsuccess/msads/"
-                rel="noreferrer"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Student Success Center MS-ADS
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                href="https://sandiego.instructure.com/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                CANVAS Dashboard
-              </a>
-            </li>
-            <li>
-              <a
-                class="text-blue-600 dark:text-blue-500 hover:underline"
-                href="https://www.sandiego.edu/library/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                USD's Copley Library
-              </a>
-            </li>
-          </ul>
+      <div class="container mx-auto py-4">
+        <div class="bg-slate-100 px-16 py-8">
+          <h3>Links</h3>
+          <h5>
+            University of San Diego - Master of Science in Applied Data Science
+            (MSADS)
+          </h5>
+          <div>
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://mycas.sandiego.edu/cas/login?service=https%3A%2F%2Fmy.sandiego.edu%3A443%2Fmysandiegoportal%2F"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Student Portal
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://onlinedegrees.sandiego.edu/studentsuccess/msads/"
+                  rel="noreferrer"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Student Success Center MS-ADS
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://sandiego.instructure.com/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  CANVAS Dashboard
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://www.sandiego.edu/library/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  USD's Copley Library
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="container mx-auto">
-        <h3>Reference Managers</h3>
-        <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-          <li>
-            <a
-              class="text-blue-600 dark:text-blue-500 hover:underline"
-              href="https://www.zotero.org/user/login/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Zotero
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-blue-600 dark:text-blue-500 hover:underline"
-              href="https://clarivate.com"
-              rel="noreferrer"
-              target="_blank"
-            >
-              EndNote
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-blue-600 dark:text-blue-500 hover:underline"
-              href="https://www.zotero.org/user/login/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Mendeley
-            </a>
-          </li>
-        </ul>
+        <div class="container mx-auto py-4">
+          <div class="bg-slate-100 px-16 py-8">
+            <h3>Reference Managers</h3>
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://www.zotero.org/user/login/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Zotero
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://clarivate.com"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  EndNote
+                </a>
+              </li>
+              <li>
+                <a
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://www.zotero.org/user/login/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Mendeley
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </Layout>
   )
