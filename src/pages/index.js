@@ -32,6 +32,7 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://linkedin.com/in/junclemente"
+                rel="noreferrer"
                 target="_blank"
               >
                 LinkedIn
@@ -41,6 +42,7 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://github.com/junclemente"
+                rel="noreferrer"
                 target="_blank"
               >
                 GitHub
@@ -61,6 +63,7 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://mycas.sandiego.edu/cas/login?service=https%3A%2F%2Fmy.sandiego.edu%3A443%2Fmysandiegoportal%2F"
+                rel="noreferrer"
                 target="_blank"
               >
                 Student Portal
@@ -70,6 +73,8 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://onlinedegrees.sandiego.edu/studentsuccess/msads/"
+                rel="noreferrer"
+                rel="noreferrer"
                 target="_blank"
               >
                 Student Success Center MS-ADS
@@ -79,6 +84,7 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://sandiego.instructure.com/"
+                rel="noreferrer"
                 target="_blank"
               >
                 CANVAS Dashboard
@@ -88,6 +94,7 @@ const index = () => {
               <a
                 class="text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://www.sandiego.edu/library/"
+                rel="noreferrer"
                 target="_blank"
               >
                 USD's Copley Library
@@ -103,6 +110,7 @@ const index = () => {
             <a
               class="text-blue-600 dark:text-blue-500 hover:underline"
               href="https://www.zotero.org/user/login/"
+              rel="noreferrer"
               target="_blank"
             >
               Zotero
@@ -112,6 +120,7 @@ const index = () => {
             <a
               class="text-blue-600 dark:text-blue-500 hover:underline"
               href="https://clarivate.com"
+              rel="noreferrer"
               target="_blank"
             >
               EndNote
@@ -121,6 +130,7 @@ const index = () => {
             <a
               class="text-blue-600 dark:text-blue-500 hover:underline"
               href="https://www.zotero.org/user/login/"
+              rel="noreferrer"
               target="_blank"
             >
               Mendeley
