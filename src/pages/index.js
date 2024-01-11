@@ -131,7 +131,7 @@ const index = () => {
               <li>
                 <a
                   class="text-blue-600 dark:text-blue-500 hover:underline"
-                  href="https://www.zotero.org/user/login/"
+                  href="https://www.mendeley.com/search/"
                   rel="noreferrer"
                   target="_blank"
                 >
