@@ -1,3 +1,3 @@
-import TopicAssigner from "../modules/TopicAssigner/TopicAssigner"
+import TopicAssigner from "../modules/TopicAssigner"
 
 export default TopicAssigner
