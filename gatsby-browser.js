@@ -1,1 +1,1 @@
-import "./src/styles/global.css"
+import "tachyons/css/tachyons.min.css"
