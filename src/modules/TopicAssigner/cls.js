@@ -1,0 +1,6 @@
+export const form = "bg-near-white pa4 br3 shadow-1 mw7 center"
+export const textarea = "w-100 pa2 br2 ba b--light-gray mt2"
+export const select = "w-100 pa2 br2 ba b--light-gray mt3"
+export const button = "mt3 br2 ph3 pv2 bg-blue white bn pointer"
+export const resultList = "list pl0 mt4"
+export const resultItem = "lh-copy dark-gray"
