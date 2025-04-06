@@ -1,5 +1,5 @@
-import * as React from "react"
-import * as cls from "./classes"
+import React from "react"
+import * as cls from "./cls"
 
 const Links = () => (
   <section className={`${cls.container} ${cls.section}`}>
@@ -47,7 +47,7 @@ const Links = () => (
             rel="noreferrer"
             target="_blank"
           >
-            USD's Copley Library
+            USD&apos;s Copley Library
           </a>
         </li>
       </ul>

@@ -1,5 +1,5 @@
-import * as React from "react"
-import * as cls from "./classes"
+import React from "react"
+import * as cls from "./cls"
 
 const ReferenceManagers = () => (
   <div className={`${cls.container} ${cls.section}`}>

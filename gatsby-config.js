@@ -12,5 +12,6 @@ module.exports = {
     title: `junclemente.com`,
     siteUrl: `https://junclemente.com`,
   },
-  plugins: [],
+  jsxRuntime: "automatic",
+  plugins: ["gatsby-plugin-react-helmet"],
 }

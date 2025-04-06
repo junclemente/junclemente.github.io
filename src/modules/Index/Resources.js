@@ -1,5 +1,4 @@
-import * as React from "react"
-import * as cls from "./classes"
+import React from "react"
 import Links from "./Links"
 import ReferenceManagers from "./ReferenceManagers"
 
