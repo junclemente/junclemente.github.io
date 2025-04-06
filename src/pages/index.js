@@ -1,1 +1,1 @@
-export { default, Head } from "./Index"
+export { default, Head } from "../modules/Index/IndexPage"
