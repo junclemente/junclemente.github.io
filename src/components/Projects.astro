@@ -1,0 +1,56 @@
+---
+import ProjectCard from "./ProjectCard.astro"
+---
+
+<section id="projects" class="projects">
+  <div class="container">
+    <h2>Selected Projects</h2>
+
+    <div class="project-grid">
+      <ProjectCard
+        title="Early Warning System for Student Outcomes"
+        description="Predictive modeling using California public education data to identify at-risk students and support early intervention decisions."
+        tools={["Python", "scikit-learn", "XGBoost", "Public Data"]}
+        href="https://github.com/junclemente/ca-early-warning-system"
+      />
+
+      <ProjectCard
+        title="Workplace Health Policy Optimization"
+        description="Cloud-based predictive analytics to forecast absenteeism and evaluate the ROI of workplace health policies."
+        tools={["Python", "XGBoost", "AWS SageMaker"]}
+        href="https://github.com/junclemente/workplace-health-policy-optimization-aws"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+/* Projects section wrapper */
+.projects {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+  color: #e5e7eb;
+}
+
+/* Align with hero width */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projects h2 {
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+</style>

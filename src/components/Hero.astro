@@ -1,0 +1,112 @@
+---
+/*
+Hero component
+simple gradient background, no images
+*/
+import ProjectCard from "./ProjectCard.astro"; 
+
+const my_title = "Applied Data Scientist"
+const headline1 = "Turning complex data"
+const headline2 = "into clear decisions"
+
+const my_summary = "I build models, analyses, and data products that help teams understand outcomes and make better choices. "
+
+const link_linkedin = "https://www.linkedin.com/in/junclemente"
+---
+<section class="hero">
+    <div class="content">
+        <p class="eyebrow">{my_title}</p>
+
+        <h1>
+            {headline1}<br />
+            {headline2}
+        </h1>
+
+        <p class="subtitle">
+            {my_summary}
+        </p>
+
+        <div class="actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href={link_linkedin} class="btn secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+<style>
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #020617 100%
+  );
+
+  color: #e5e7eb;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn.primary {
+  background: #6366f1;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #4f46e5;
+}
+
+.btn.secondary {
+  border: 1px solid #475569;
+  color: #e5e7eb;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+</style>
