@@ -28,14 +28,16 @@ This repository contains the source code for my personal website, built with
 ├── astro.config.mjs
 ├── package.json
 └── README.md
+```
 
 ## 🚀 Local Development
 ```bash
 npm install
 npm run dev
 ```
-This site will be available ate: 
-```
+
+This site will be available at: 
+```bash 
 http://localhost:4321
 ```
 
@@ -46,12 +48,12 @@ npm run preview
 ```
 
 ## 🔀 Branch & Deployment Workflow
-* develop
+  - develop
     Active development branch (work in progress)
 
-* main
-    Production branch
-    Pushing to main triggers a GitHub Actions workflow that:
+  - main
+    - Production branch
+    - Pushing to main triggers a GitHub Actions workflow that:
 
 1. Installs dependencies
 
@@ -62,9 +64,9 @@ npm run preview
 Build artifacts (dist/, node_modules/, .astro/) are not committed.
 
 ## 🧾 Notes
-* GitHub Pages is configured to deploy via GitHub Actions
+  - GitHub Pages is configured to deploy via GitHub Actions
 
-* Jekyll is explicitly disabled using .nojekyll
+  - Jekyll is explicitly disabled using .nojekyll
 
-* The site uses a custom domain configured via public/CNAME
+  - The site uses a custom domain configured via public/CNAME
 
