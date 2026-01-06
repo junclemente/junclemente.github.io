@@ -20,6 +20,23 @@ import ProjectCard from "./ProjectCard.astro"
         tools={["Python", "XGBoost", "AWS SageMaker"]}
         href="https://github.com/junclemente/workplace-health-policy-optimization-aws"
       />
+
+      <ProjectCard
+        title="jcds - Exploratory Data Analysis Toolkit"
+        description="A reusable Python library for fast, structured exploratory data analysis with consistent reporting patterns."
+        tools={["Python", "Exploratory Data Analysis", "Python Library"]}
+        href="https://github.com/junclemente/jcds"
+      />
+
+      <ProjectCard  
+        title="Washington Traffic Data Pipeline"
+        description="Data ingestion, cleaning, and feature engineering pipeline built on public transportation datasets."
+        tools={["Python", "Data Pipelines", "Public Data"]}
+        href="https://github.com/junclemente/washington-traffic-data-pipeline"
+      />
+    </div>
+    <div class="projects-footer">
+      <a class="all-projects" href="/projects">View all projects ➡️</a> 
     </div>
   </div>
 </section>
@@ -53,4 +70,23 @@ import ProjectCard from "./ProjectCard.astro"
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
+
+.projects-footer {
+  margin-top: 1.25rem;
+}
+
+.all-projects {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #c7d2fe;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.all-projects:hover {
+  text-decoration: underline;
+}
+
+
 </style>
