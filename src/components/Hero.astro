@@ -1,9 +1,10 @@
 ---
 import comet from "../assets/comet-hero.jpg";
+
+const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
 ---
 
-<section class="hero">
-  <!-- Background image -->
+<section class="hero" data-parallax-speed={PARALLAX_SPEED}>
   <img
     src={comet.src}
     alt=""
@@ -12,10 +13,8 @@ import comet from "../assets/comet-hero.jpg";
     fetchpriority="high"
   />
 
-  <!-- Overlay -->
   <div class="overlay"></div>
 
-  <!-- Content -->
   <div class="content">
     <p class="eyebrow">Applied Data Scientist</p>
 
@@ -43,7 +42,6 @@ import comet from "../assets/comet-hero.jpg";
 </section>
 
 <style>
-
   .hero {
     position: relative;
     min-height: 100vh;
@@ -51,7 +49,7 @@ import comet from "../assets/comet-hero.jpg";
     align-items: center;
     overflow: hidden;
   }
-  
+
   .hero-bg {
     position: absolute;
     inset: 0;
@@ -59,8 +57,10 @@ import comet from "../assets/comet-hero.jpg";
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
   }
-  
+
   .overlay {
     position: absolute;
     inset: 0;
@@ -69,37 +69,87 @@ import comet from "../assets/comet-hero.jpg";
       rgba(2, 6, 23, 0.85) 0%,
       rgba(2, 6, 23, 0.6) 50%,
       rgba(2, 6, 23, 0.9) 100%
-      );
-      z-index: 1;
+    );
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    padding: 2rem;
+    color: #e5e7eb;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #cbd5f5;
+    margin-bottom: 2rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg {
+      transform: none !important;
     }
-    
-    .content {
-      position: relative;
-      z-index: 2;
-      max-width: 720px;
-      padding: 2rem;
-      color: #e5e7eb;
+  }
+</style>
+
+<script>
+  const prefersReduced =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReduced) {
+    const hero = document.querySelector(".hero");
+    const bg = document.querySelector(".hero-bg");
+
+    if (hero && bg) {
+      const speed = parseFloat(hero.dataset.parallaxSpeed || "0.25");
+
+      let ticking = false;
+      let isInView = true;
+
+      const io = new IntersectionObserver(([entry]) => {
+        isInView = entry.isIntersecting;
+      });
+      io.observe(hero);
+
+      const update = () => {
+        ticking = false;
+        if (!isInView) return;
+
+        const rect = hero.getBoundingClientRect();
+        const scrollProgress = -rect.top;
+        const y = Math.max(0, scrollProgress) * speed;
+
+        bg.style.transform = `translate3d(0, ${y}px, 0)`;
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+      };
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      onScroll();
     }
-    
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.75rem;
-      color: #94a3b8;
-      margin-bottom: 1rem;
-    }
-    
-    h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-    }
-    
-    .subtitle {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #cbd5f5;
-      margin-bottom: 2rem;
-    }
-    
-    </style>
+  }
+</script>
