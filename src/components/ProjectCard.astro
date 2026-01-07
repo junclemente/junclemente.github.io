@@ -1,81 +1,73 @@
 ---
-const { title, description, tools = [], href } = Astro.props; 
+const { title, description, tools = [], href } = Astro.props;
 ---
 
-<article class="project-card">
-    <h3>{title}</h3>
+<article class="project-card br3 pa4">
+  <h3 class="mt0 mb2 f4 near-white">{title}</h3>
 
-    <p class="description">
-        {description}
-    </p>
+  <p class="description mt0 mb3 lh-copy">
+    {description}
+  </p>
 
-    <ul class="tools">
-        {tools.map((tool) => (
-        <li>{tool}</li>
-        ))}
-    </ul>
+  <ul class="tools list pa0 ma0 mb3">
+    {tools.map((tool) => <li class="tool-pill">{tool}</li>)}
+  </ul>
 
-    <a class="project-link" href={href} target="_blank" rel="noopener noreferrer">
-        View Project ➡️
-    </a>
+  <a
+    class="project-link link"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    View Project →
+  </a>
 </article>
 
 <style>
-.project-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 1.5rem;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
+  .project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
-.project-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(99, 102, 241, 0.45);
-  background: rgba(255, 255, 255, 0.04);
-}
+  .project-link {
+    margin-top: auto; /* pushes link to bottom */
+  }
 
-.project-card h3 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.15rem;
-  color: #f8fafc;
-}
+  .project-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(99, 102, 241, 0.45);
+    background: rgba(255, 255, 255, 0.04);
+  }
 
-.description {
-  margin: 0 0 1rem 0;
-  line-height: 1.6;
-  color: #cbd5e1;
-}
+  .description {
+    color: #cbd5e1;
+  }
 
-/* Tool pills */
-.tools {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.25rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+  .tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
-.tools li {
-  font-size: 0.8rem;
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.03);
-  padding: 0.35rem 0.6rem;
-  border-radius: 999px;
-}
+  .tool-pill {
+    list-style: none;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+  }
 
-/* Link */
-.project-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #a5b4fc;
-  font-weight: 500;
-}
+  .project-link {
+    color: #a5b4fc;
+    font-weight: 500;
+    text-decoration: none;
+  }
 
-.project-link:hover {
-  color: #c7d2fe;
-  text-decoration: underline;
-}
+  .project-link:hover {
+    color: #c7d2fe;
+    text-decoration: underline;
+  }
 </style>
