@@ -1,16 +1,21 @@
 ---
+import { Image } from "astro:assets";
 import comet from "../assets/comet-hero.jpg";
 
 const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
 ---
 
 <section class="hero" data-parallax-speed={PARALLAX_SPEED}>
-  <img
-    src={comet.src}
+  <Image 
+    src={comet}
     alt=""
     class="hero-bg"
     loading="eager"
     fetchpriority="high"
+    widths={[1960, 1280, 1600, 1920, 2560]}
+    sizes= "100vw"
+    format="webp"
+    quality={82}
   />
 
   <div class="overlay"></div>
