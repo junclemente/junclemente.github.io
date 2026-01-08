@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+
+  color: var(--text);
+  opacity: 0.9;
+
+  /* optional "button" feel */
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 120ms ease,
+    opacity 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
+
+  &:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(99, 102, 241, 0.8);
+    outline-offset: 3px;
+  }
+
+  /* Style slotted SVGs */
+  :global(svg) {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
