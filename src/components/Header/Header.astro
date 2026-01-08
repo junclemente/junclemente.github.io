@@ -1,0 +1,23 @@
+---
+const pathname = Astro.url?.pathname ?? "/";
+import styles from "./Header.module.scss";
+
+const isActive = (href: string) =>
+  href === "/" ? pathname === "/" : pathname.startsWith(href);
+---
+
+<header class={styles.header}>
+  <div class={styles.inner}>
+    <a href="/" class={`${styles.brand} ${isActive("/") ? styles.active : ""}`}
+      >Jun Clemente</a
+    >
+
+    <nav class={styles.nav} aria-label="Primary">
+      <a
+        href="/projects"
+        class={`${styles.link} ${isActive("/projects") ? styles.active : ""}`}
+        >Projects</a
+      >
+    </nav>
+  </div>
+</header>
