@@ -1,8 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro"; // adjust path if needed
+import Layout from "../layouts/Layout.astro";
+import ResourceCard from "../components/ResourceCard/ResourceCard.astro";
 ---
 
-<Layout pageTitle="Resources">
+<Layout
+  pageTitle="Resources"
+  description="Practical guides and tooling notes, including Python + R in Jupyter on Windows via WSL2 and Conda."
+>
   <main class="resources">
     <header class="hero">
       <h1>Resources</h1>
@@ -12,20 +16,14 @@ import Layout from "../layouts/Layout.astro"; // adjust path if needed
       </p>
     </header>
 
-    <section class="list">
-      <article class="card">
-        <h2>Python + R in Jupyter</h2>
-        <p class="subtitle">Windows · WSL2 · Conda</p>
-        <p>
-          A stable development environment for MS-ADS coursework that requires
-          both Python and R in the same Jupyter workflow — designed specifically
-          for Windows users.
-        </p>
-
-        <a href="/resources/python-r-dev-env" class="cta">
-          View guide →
-        </a>
-      </article>
+    <section class="grid">
+      <ResourceCard
+        title="Python + R in Jupyter"
+        subtitle="Windows * WSL2 * Conda"
+        description="A stable development environment for MS-ADS coursework that requires both Python and R in the same Jupyter workflow - designed specifically for Windows users."
+        href="https://github.com/junclemente/USD-MSADS/blob/main/setup/python_r_windows.md"
+        cta="View full guide on GitHub →"
+      />
     </section>
   </main>
 </Layout>

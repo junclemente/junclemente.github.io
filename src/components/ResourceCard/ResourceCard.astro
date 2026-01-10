@@ -1,0 +1,38 @@
+---
+import styles from "./ResourceCard.module.scss";
+
+type Props = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  href: string;
+  cta?: string;
+  external?: boolean;
+};
+
+const {
+  title,
+  subtitle,
+  description,
+  href,
+  cta = "View on GitHub →",
+  external = true,
+} = Astro.props;
+---
+
+<article class={styles.card}>
+  <h2 class={styles.title}>{title}</h2>
+
+  {subtitle && <p class={styles.subtitle}>{subtitle}</p>}
+
+  <p class={styles.desc}>{description}</p>
+
+  <a
+    class={styles.cta}
+    href={href}
+    target={external ? "_blank" : undefined}
+    rel={external ? "noopener noreferrer" : undefined}
+  >
+    {cta}
+  </a>
+</article>
