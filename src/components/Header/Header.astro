@@ -7,7 +7,7 @@ const links = [
   { href: "/resources", label: "Resources" },
 ];
 
-const about = { href: "/about", label: "About", disabled: true };
+const about = { href: "/about", label: "About", disabled: false };
 
 const isActive = (href: string) =>
   href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -24,32 +24,36 @@ const isActive = (href: string) =>
     </a>
 
     <nav class={styles.nav} aria-label="Primary">
-      {links.map((l) => (
-        <a
-          href={l.href}
-          class={`${styles.link} ${isActive(l.href) ? styles.active : ""}`}
-        >
-          {l.label}
-        </a>
-      ))}
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class={`${styles.link} ${isActive(l.href) ? styles.active : ""}`}
+          >
+            {l.label}
+          </a>
+        ))
+      }
 
-      {about.disabled ? (
-        <span
-          class={`${styles.link} ${styles.disabled ?? ""}`}
-          aria-disabled="true"
-          title="Coming soon"
-        >
-          {about.label}
-          <span class={styles.soon ?? ""}>Soon</span>
-        </span>
-      ) : (
-        <a
-          href={about.href}
-          class={`${styles.link} ${isActive(about.href) ? styles.active : ""}`}
-        >
-          {about.label}
-        </a>
-      )}
+      {
+        about.disabled ? (
+          <span
+            class={`${styles.link} ${styles.disabled ?? ""}`}
+            aria-disabled="true"
+            title="Coming soon"
+          >
+            {about.label}
+            <span class={styles.soon ?? ""}>Soon</span>
+          </span>
+        ) : (
+          <a
+            href={about.href}
+            class={`${styles.link} ${isActive(about.href) ? styles.active : ""}`}
+          >
+            {about.label}
+          </a>
+        )
+      }
     </nav>
   </div>
 </header>
