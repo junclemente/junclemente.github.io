@@ -1,10 +1,6 @@
 ---
-<<<<<<< HEAD
-import "tachyons/css/tachyons.min.css";
-=======
 import "../styles/global.css";
 import Header from "../components/Header/Header.astro";
->>>>>>> develop
 import Footer from "../components/Footer.astro";
 
 type Props = {
@@ -32,13 +28,6 @@ const ogUrl = new URL(ogImage, site).toString();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-<<<<<<< HEAD
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Jun Clemente | Applied Data Scientist</title>
-  </head>
-  <body>
-=======
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
@@ -65,89 +54,7 @@ const ogUrl = new URL(ogImage, site).toString();
 
   <body>
     <Header />
->>>>>>> develop
     <slot />
     <Footer />
   </body>
 </html>
-<<<<<<< HEAD
-
-<style is:global>
-  :root {
-    --bg-1: #0f172a;
-    --bg-2: #020617;
-
-    --text: #e5e7eb;
-    --muted: #cbd5e1;
-    --muted-2: #94a3b8;
-
-    --accent: #6366f1;
-    --card: rgba(255, 255, 255, 0.03);
-    --border: rgba(255, 255, 255, 0.1);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  html,
-  body {
-    height: 100%;
-  }
-
-  body {
-    margin: 0;
-    width: 100%;
-    color: var(--text);
-    background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
-  }
-
-  a {
-    color: inherit;
-  }
-
-  .actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition:
-      background 0.2s ease,
-      color 0.2s ease,
-      border 0.2s ease;
-  }
-
-  .btn.primary {
-    background: #6366f1;
-    color: white;
-  }
-
-  .btn.primary:hover {
-    background: #4f46e5;
-  }
-
-  .btn.secondary {
-    border: 1px solid #475569;
-    color: #e5e7eb;
-  }
-
-  .btn.secondary:hover {
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  .hero p {
-    line-height: 1.6;
-  }
-</style>
-=======
->>>>>>> develop
