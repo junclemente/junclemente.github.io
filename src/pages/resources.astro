@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ResourceCard from "../components/ResourceCard/ResourceCard.astro";
+---
+
+<Layout
+  pageTitle="Resources"
+  description="Practical guides and tooling notes, including Python + R in Jupyter on Windows via WSL2 and Conda."
+>
+  <main class="resources">
+    <header class="hero">
+      <h1>Resources</h1>
+      <p>
+        Practical guides and tooling notes I’ve collected while working through
+        data science coursework and real-world projects.
+      </p>
+    </header>
+
+    <section class="grid">
+      <ResourceCard
+        title="Python + R in Jupyter"
+        subtitle="Windows * WSL2 * Conda"
+        description="A stable development environment for MS-ADS coursework that requires both Python and R in the same Jupyter workflow - designed specifically for Windows users."
+        href="https://github.com/junclemente/USD-MSADS/blob/main/setup/python_r_windows.md"
+        cta="View full guide on GitHub →"
+      />
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .resources {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero {
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    color: var(--muted);
+    max-width: 42rem;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .cta:hover {
+    text-decoration: underline;
+  }
+</style>

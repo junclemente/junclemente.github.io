@@ -1,1 +1,103 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+/* -------------------------
+   Tachyons (global utilities)
+-------------------------- */
+@import "tachyons/css/tachyons.min.css";
+
+/* -------------------------
+   CSS Variables / Tokens
+-------------------------- */
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #020617;
+
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --muted-2: #94a3b8;
+
+  --accent: #6366f1;
+  --card: rgba(255, 255, 255, 0.03);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+/* -------------------------
+   Base / Reset
+-------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  color: var(--text);
+  background: linear-gradient(
+    135deg,
+    var(--bg-1) 0%,
+    var(--bg-2) 100%
+  );
+}
+
+/* -------------------------
+   Global Elements
+-------------------------- */
+a {
+  color: inherit;
+}
+
+/* -------------------------
+   Shared UI Patterns
+-------------------------- */
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border 0.2s ease;
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #4f46e5;
+}
+
+.btn.secondary {
+  border: 1px solid #475569;
+  color: var(--text);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* -------------------------
+   Page-level helpers
+-------------------------- */
+.hero p {
+  line-height: 1.6;
+}
+>>>>>>> develop
