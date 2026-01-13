@@ -1,6 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ResourceCard from "../components/ResourceCard/ResourceCard.astro";
+
+const resources = [
+  {
+    title: "Python + R in Jupyter",
+    subtitle: "Windows | WSL2 | Conda",
+    description: "A stable development environment for MS-ADS coursework that requires both Python and R in the same Jupyter workflow - designed specifically for Windows users.",
+    href: "https://github.com/junclemente/USD-MSADS/blob/main/setup/python_r_windows.md",
+    cta : "View full guide on GitHub →",
+  },
+  {
+    title: "Creating and Updating Conda Environments from a YAML File",
+    subtitle: "Conda | VSCode",
+    description: "Conda environment YAML files make it easy to share, recreate, or update environments with the same dependencies across systems.",
+    href: "https://github.com/junclemente/USD-MSADS/blob/main/setup/creating_conda_envs.md",
+    cta: "View full guide on Github →",
+  },
+];
 ---
 
 <Layout
@@ -17,13 +34,19 @@ import ResourceCard from "../components/ResourceCard/ResourceCard.astro";
     </header>
 
     <section class="grid">
-      <ResourceCard
-        title="Python + R in Jupyter"
-        subtitle="Windows * WSL2 * Conda"
-        description="A stable development environment for MS-ADS coursework that requires both Python and R in the same Jupyter workflow - designed specifically for Windows users."
-        href="https://github.com/junclemente/USD-MSADS/blob/main/setup/python_r_windows.md"
-        cta="View full guide on GitHub →"
-      />
+      <!-- {resources.map((resource) => ( 
+        <ResourceCard
+          key={resource.href}
+          title={resource.title}
+          subtitle={resource.subtitle}
+          description={resource.description}
+          href={resource.href}
+          cta={resource.cta}
+        />
+      ))} -->
+      {resources.map((r) => ( 
+        <ResourceCard {...r} />
+      ))}
     </section>
   </main>
 </Layout>
