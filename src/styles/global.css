@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Alegreya:wght@400;600;700&family=VT323&family=Calligraffitti&display=swap");
+
 /* -------------------------
    Tachyons (global utilities)
 -------------------------- */
@@ -17,25 +19,50 @@
   --accent: #6366f1;
   --card: rgba(255, 255, 255, 0.03);
   --border: rgba(255, 255, 255, 0.1);
+
+  --font-sans:
+    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-serif: "Alegreya", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono:
+    "VT323", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-cursive: "Calligraffitti", cursive;
 }
 
 /* -------------------------
    Base / Reset
 -------------------------- */
+/* Minimal modern reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 html,
 body {
-  height: 100%;
-}
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-body {
   margin: 0;
   width: 100%;
   color: var(--text);
   background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 }
 
 /* -------------------------
@@ -85,6 +112,23 @@ a {
 
 .btn.secondary:hover {
   background: rgba(255, 255, 255, 0.06);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+}
+
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-cursive {
+  font-family: var(--font-cursive);
 }
 
 /* -------------------------
