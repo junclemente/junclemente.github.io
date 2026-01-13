@@ -53,7 +53,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     environment:
       name: github-pages-v2
       url: ${{ steps.deploy.outputs.page_url }}
@@ -61,3 +61,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000 # 30 minutes
+          error_count: 20
+          reporting_interval: 5000

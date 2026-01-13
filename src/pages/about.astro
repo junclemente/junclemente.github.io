@@ -2,20 +2,99 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout pageTitle="About">
-  <section style="max-width: 720px; margin: 0 auto;">
-    <p>
-      Hi — I’m Jun. I’m a data scientist and developer based in Southern
-      California, with a background in applied data science, analytics, and
-      systems thinking.
-    </p>
+<Layout
+  title="About | Jun Clemente"
+  description="About Jun Clemente — applied data science, analytics, and data products."
+>
+  <main class="mw8 center ph3 ph4-ns pv5">
+    <header class="mb4 mb5-ns">
+      <h1 class="f2 f1-ns fw6 ma0">About</h1>
+      <p class="f4 lh-title mt3 mb0 font-serif">
+        Building with data, clarity, and real-world impact.
+      </p>
+      <p class="f5 lh-copy o-80 mt3 mb0 measure">
+        I’m Jun — a data scientist and developer based in Southern California. I
+        build models, analyses, and data products that help teams understand
+        outcomes and make better choices.
+      </p>
+    </header>
 
-    <p>
-      I enjoy building things that sit at the intersection of data, code, and
-      real-world impact — from predictive models and data tools to personal
-      projects and experiments.
-    </p>
+    <!-- Two-column layout -->
+    <section class="flex-ns items-start-ns">
+      <!-- Main/Left card -->
+      <div class="w-100 w-60-ns pr0 pr4-ns mb4 mb0-ns">
+        <section class="card pa4 pa5-ns">
+          <h2 class="f3 fw6 mt0 mb3">What I do</h2>
 
-    <p>This site is a living space for my work, ideas, and ongoing projects.</p>
-  </section>
+          <p class="f5 lh-copy o-90 mt0">
+            I like taking messy problems and turning them into something
+            reliable: a clean dataset, a useful model, a clear dashboard, or a
+            small tool that saves time.
+          </p>
+
+          <p class="f5 lh-copy o-90">
+            My work tends to sit between analytics and engineering — building
+            workflows that are reproducible, explainable, and easy for others to
+            use.
+          </p>
+
+          <h3 class="f4 fw6 mt4 mb3">Focus areas</h3>
+          <ul class="f5 lh-copy pl3 mt0 mb4">
+            <li class="mb2">Predictive modeling and decision support</li>
+            <li class="mb2">EDA, feature engineering, and storytelling</li>
+            <li class="mb2">Practical data tools and automation</li>
+          </ul>
+
+          <div class="mt4">
+            <a
+              href="/projects"
+              class="link br-pill ba b--white-20 ph3 pv2 f6 mr2 mb2 dib hover-bg-white-10"
+            >
+              View Projects →
+            </a>
+
+            <a
+              href="/resources"
+              class="link br-pill ba b--white-20 ph3 pv2 f6 mr2 mb2 dib hover-bg-white-10"
+            >
+              Resources →
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Side/Right card -->
+      <aside class="w-100 w-40-ns mt0-ns">
+        <section class="card pa4 pa5-ns mt0">
+          <h2 class="f4 fw6 mt0 mb3">Toolkit</h2>
+
+          <div>
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib"
+              >Python</span
+            >
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib">R</span>
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib"
+              >SQL</span
+            >
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib">ML</span
+            >
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib"
+              >EDA</span
+            >
+            <span class="ba b--white-10 br-pill ph3 pv2 f6 mr2 mb2 dib"
+              >Visualization</span
+            >
+          </div>
+
+          <hr class="ba b--white-10 mv4" />
+
+          <h2 class="f4 fw6 mt0 mb3">Outside of work</h2>
+          <p class="f6 lh-copy o-80 mt0 mb0">
+            I’m into music and creative projects, plus plenty of tinkering with
+            home-lab and build setups.
+          </p>
+        </section>
+      </aside>
+    </section>
+  </main>
 </Layout>
