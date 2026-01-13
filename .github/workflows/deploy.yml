@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,9 +39,6 @@ jobs:
       - name: Add .nojekyll
         run: touch dist/.nojekyll
 
-      # If you're using a custom domain, this ensures the deployed artifact has CNAME.
-      # (If you already have public/CNAME, Astro should copy it into dist automatically,
-      # but this keeps it bulletproof.)
       - name: Add CNAME
         run: |
           if [ -f public/CNAME ]; then
@@ -53,6 +53,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
