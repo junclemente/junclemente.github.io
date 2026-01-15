@@ -1,4 +1,4 @@
-export const projects = [
+export const dataProjects = [
   {
     title: "Early Warning System for Student Outcomes",
     description:
@@ -40,5 +40,22 @@ export const projects = [
       "A reusable Python library for fast, structured exploratory data analysis with consistent reporting patterns.",
     tools: ["Python", "Exploratory Data Analysis", "Python Library"],
     href: "https://github.com/junclemente/jcds",
+  },
+];
+
+export const fullStackProjects = [
+  {
+    title: "Flask CRUD Web Application (AWS Deployment)",
+    description:
+      "A full-stack web application built with Flask and PostgreSQL, featuring user authentication, role-based authorization, and RESTful APIs. Deployed to a Linux server on AWS Lightsail.",
+    tools: ["Python", "Flask", "PostgreSQL", "REST APIs", "AWS", "Linux"],
+    href: "https://github.com/your-repo",
+  },
+  {
+    title: "Interactive Neighborhood Map Application",
+    description:
+      "A single-page JavaScript application using the Google Maps API and third-party data sources to deliver an interactive, map-based user experience.",
+    tools: ["JavaScript", "Google Maps API", "HTML", "CSS", "REST APIs"],
+    href: "https://github.com/your-repo",
   },
 ];
