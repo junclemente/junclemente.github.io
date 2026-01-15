@@ -2,50 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 
-const projects = [
-  {
-    title: "Early Warning System for Student Outcomes",
-    description:
-      "Predictive modeling using California public education data to identify at-risk students and support early intervention decisions.",
-    tools: ["Python", "scikit-learn", "XGBoost", "Public Data"],
-    href: "https://github.com/junclemente/ca-early-warning-system",
-  },
-  {
-    title: "Workplace Health Policy Optimization",
-    description:
-      "Cloud-based predictive analytics to forecast absenteeism and evaluate the ROI of workplace health policies.",
-    tools: ["Python", "XGBoost", "AWS SageMaker"],
-    href: "https://github.com/junclemente/workplace-health-policy-optimization-aws",
-  },
-  {
-    title: "Washington Traffic Data Pipeline",
-    description:
-      "Data ingestion, cleaning, and feature engineering pipeline built on public transportation datasets.",
-    tools: ["Python", "Data Pipelines", "Public Data"],
-    href: "https://github.com/junclemente/washington-traffic-data-pipeline",
-  },
-  {
-    title: "School Sentiment NLP",
-    description:
-      "NLP-based sentiment and topic analysis comparing online discussions of high- and low-performing school districts.",
-    tools: ["Python", "NLP", "Topic Modeling"],
-    href: "https://github.com/junclemente/school-sentiment-nlp",
-  },
-  {
-    title: "Heart Disease Prediction (Multi-cohort)",
-    description:
-      "Comparative modeling of coronary heart disease using expanded clinical features across multiple international patient cohorts.",
-    tools: ["Python", "Modeling", "Clinical Data"],
-    href: "https://github.com/junclemente/heart-disease-prediction-multi-cohort",
-  },
-  {
-    title: "jcds - Exploratory Data Analysis Toolkit",
-    description:
-      "A reusable Python library for fast, structured exploratory data analysis with consistent reporting patterns.",
-    tools: ["Python", "Exploratory Data Analysis", "Python Library"],
-    href: "https://github.com/junclemente/jcds",
-  },
-];
+import { dataProjects, fullStackProjects } from "../data/projects.js";
 ---
 
 <Layout pageTitle="Projects">
@@ -53,15 +10,22 @@ const projects = [
     <header class="header">
       <h1>Projects</h1>
       <p>
-        A selection of applied data science, machine learning, and data engineering work.
-        Most projects include code, notebooks, and documentation on GitHub.
+        A selection of applied data science, machine learning, and data
+        engineering work. Most projects include code, notebooks, and
+        documentation on GitHub.
       </p>
     </header>
 
+    <!-- Data Science Projects -->
     <section class="grid">
-      {projects.map((p) => (
-        <ProjectCard {...p} />
-      ))}
+      {dataProjects.map((p) => <ProjectCard {...p} />)}
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Frontend / Full-Stack Project -->
+    <section class="grid">
+      {fullStackProjects.map((p) => <ProjectCard {...p} />)}
     </section>
   </main>
 </Layout>
@@ -95,5 +59,12 @@ const projects = [
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.25rem;
+  }
+
+  .divider {
+    margin: 4rem 0;
+    border: none;
+    border-top: 1px solid var(--border);
+    opacity: 0.6;
   }
 </style>
