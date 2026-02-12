@@ -49,13 +49,13 @@ export const fullStackProjects = [
     description:
       "A full-stack web application built with Flask and PostgreSQL, featuring user authentication, role-based authorization, and RESTful APIs. Deployed to a Linux server on AWS Lightsail.",
     tools: ["Python", "Flask", "PostgreSQL", "REST APIs", "AWS", "Linux"],
-    href: "https://github.com/your-repo",
+    href: "https://github.com/junclemente/flask-crud-catalog",
   },
   {
     title: "Interactive Neighborhood Map Application",
     description:
       "A single-page JavaScript application using the Google Maps API and third-party data sources to deliver an interactive, map-based user experience.",
     tools: ["JavaScript", "Google Maps API", "HTML", "CSS", "REST APIs"],
-    href: "https://github.com/your-repo",
+    href: "https://github.com/junclemente/neighborhood-map",
   },
 ];
