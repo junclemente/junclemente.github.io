@@ -23,8 +23,8 @@ export const dataProjects = [
 {
   title: "School Sentiment NLP",
   description:
-    "NLP-based sentiment and topic analysis comparing Reddit discussions of high- and low-performing school districts (Palo Alto vs. Oklahoma City) to surface community perception patterns. Deployed as a live Streamlit app.",
-  tools: ["Python", "NLTK", "scikit-learn", "Streamlit"],
+    "NLP-based sentiment and topic analysis comparing Reddit discussions of high- and low-performing school districts (Palo Alto vs. Oklahoma City) to surface community perception patterns.",
+  tools: ["Python", "NLTK", "spaCy", "scikit-learn"],
   href: "https://github.com/junclemente/school-sentiment-nlp",
 },
  {
