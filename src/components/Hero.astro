@@ -6,14 +6,14 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
 ---
 
 <section class="hero" data-parallax-speed={PARALLAX_SPEED}>
-  <Image 
+  <Image
     src={comet}
     alt=""
     class="hero-bg"
     loading="eager"
     fetchpriority="high"
     widths={[1960, 1280, 1600, 1920, 2560]}
-    sizes= "100vw"
+    sizes="100vw"
     format="webp"
     quality={82}
   />
@@ -21,7 +21,9 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
   <div class="overlay"></div>
 
   <div class="content">
-    <p class="eyebrow">Applied Data Scientist - M.S. Applied Data Science, USD</p>
+    <p class="eyebrow">
+      Applied Data Scientist - M.S. Applied Data Science, USD
+    </p>
 
     <h1>
       Turning complex data<br />
@@ -29,7 +31,8 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
     </h1>
 
     <p class="subtitle">
-       I build end-to-end data systems — from pipelines to deployed models — that turn complex, high-stakes data into decisions that hold up under scrutiny.
+      I build end-to-end data systems — from pipelines to deployed models — that
+      turn complex, high-stakes data into decisions that hold up under scrutiny.
     </p>
 
     <div class="actions">
@@ -42,26 +45,45 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
       >
         LinkedIn
       </a>
-      <a 
-        href="https://github.com/junclemente" 
-        class="btn secondary" 
-        target="_blank" 
+      <a
+        href="https://github.com/junclemente"
+        class="btn secondary"
+        target="_blank"
         rel="noopener noreferrer"
       >
         GitHub
-    </a>
+      </a>
     </div>
+  </div>
+  <div class="scroll-indicator">
+    <a href="#projects" aria-label="Scroll to projects">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 5v14M5 12l7 7 7-7"></path>
+      </svg>
+    </a>
   </div>
 </section>
 
 <style>
   .hero {
     position: relative;
-    min-height: 80vh;
+    height: 100dvh;
+    min-height: 600px;
     display: flex;
     align-items: center;
-    padding-top: 1rem;
-    overflow: hidden;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    /* overflow: hidden; */
   }
 
   .hero-bg {
@@ -73,6 +95,7 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
     z-index: 0;
     transform: translate3d(0, 0, 0);
     will-change: transform;
+    overflow: hidden;
   }
 
   .overlay {
@@ -119,6 +142,35 @@ const PARALLAX_SPEED = 0.25; // 👈 try 0.15–0.35
   @media (prefers-reduced-motion: reduce) {
     .hero-bg {
       transform: none !important;
+    }
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  .scroll-indicator a {
+    color: #94a3b8;
+    display: block;
+    animation: bounce 2s infinite;
+    transition: color 0.2s;
+  }
+
+  .scroll-indicator a:hover {
+    color: #e5e7eb;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
     }
   }
 </style>
