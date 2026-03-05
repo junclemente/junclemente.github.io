@@ -1,39 +1,28 @@
 ---
 import ProjectCard from "./ProjectCard.astro"
----
+import { dataProjects} from "../data/projects.js"
 
+const featuredProjects = [
+  dataProjects[0], // Early Warning System
+  dataProjects[2], // Washington Traffic Pipeline
+  dataProjects[1], // Workplace Health Policy Optimization
+  dataProjects[3] // School Sentiment NLP
+  ]
+
+  ---
 <section id="projects" class="projects">
   <div class="container">
     <h2>Selected Projects</h2>
 
     <div class="project-grid">
-      <ProjectCard
-        title="Early Warning System for Student Outcomes"
-        description="Predictive modeling using California public education data to identify at-risk students and support early intervention decisions."
-        tools={["Python", "scikit-learn", "XGBoost", "Public Data"]}
-        href="https://github.com/junclemente/ca-early-warning-system"
-      />
-
-      <ProjectCard
-        title="Workplace Health Policy Optimization"
-        description="Cloud-based predictive analytics to forecast absenteeism and evaluate the ROI of workplace health policies."
-        tools={["Python", "XGBoost", "AWS SageMaker"]}
-        href="https://github.com/junclemente/workplace-health-policy-optimization-aws"
-      />
-
-      <ProjectCard
-        title="jcds - Exploratory Data Analysis Toolkit"
-        description="A reusable Python library for fast, structured exploratory data analysis with consistent reporting patterns."
-        tools={["Python", "Exploratory Data Analysis", "Python Library"]}
-        href="https://github.com/junclemente/jcds"
-      />
-
-      <ProjectCard  
-        title="Washington Traffic Data Pipeline"
-        description="Data ingestion, cleaning, and feature engineering pipeline built on public transportation datasets."
-        tools={["Python", "Data Pipelines", "Public Data"]}
-        href="https://github.com/junclemente/washington-traffic-data-pipeline"
-      />
+      {featuredProjects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          tools={project.tools}
+          href={project.href}
+        />
+      ))}
     </div>
     <div class="projects-footer">
       <a class="all-projects" href="/projects">View all projects →</a> 
